@@ -22,13 +22,13 @@ Fluxo da aplicação:
 5. Tela de download com QR Code para acesso à foto
 6. Tela final com mensagem de agradecimento
 
-## 🛠 Tecnologias utilizadas
+##  Tecnologias utilizadas
 
 - **React com TypeScript**
 - **Styled Components** → Estilização dos componentes
 - **React Webcam** → Captura de fotos da webcam
 - **qrcode.react** → Geração de QR Code
-- **Fetch API** → Comunicação com o backend (sem uso de Axios)
+- **Fetch API** → Comunicação com o backend 
 - **useState / useEffect** → Controle de estado e ciclo de vida dos componentes
 - **Spring Boot (Backend - API REST)** → [Repositório Backend](https://github.com/FerRufato/Desafio-Photo-opp)
 
