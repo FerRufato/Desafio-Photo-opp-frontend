@@ -17,7 +17,7 @@ O sistema permite que o usuário:
 - **TypeScript**
 - **Styled Components**
 - **Hooks React**: principalmente **useState** e **useEffect**
-- **Fetch API** (para envio da foto ao backend - **não foi utilizado Axios**)
+- **Fetch API** (para envio da foto ao backend)
 - **HTML5 Media API** (para acesso à webcam)
 
 ---
@@ -49,7 +49,7 @@ src/
 
 ---
 
-## 🛠️ Funcionalidades principais
+##  Funcionalidades principais
 
 -  **Captura de foto com webcam**
 -  **Contagem regressiva antes da foto**
