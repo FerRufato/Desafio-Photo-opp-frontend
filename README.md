@@ -1,128 +1,76 @@
-# Photo Opp - Frontend
+# 📸 Desafio Photo Opp - Frontend
 
-Este é o **Frontend** da aplicação **Photo Opp**, desenvolvido como parte de um desafio técnico.
+Este é o projeto **Frontend** do desafio **Photo Opp**, feito com **React + TypeScript**.
 
-O sistema permite que o usuário:
+O objetivo foi criar uma aplicação web capaz de capturar fotos via webcam, permitir a visualização, o download e o compartilhamento via QR Code.
 
-✅ Capture uma foto usando a webcam  
-✅ Visualize uma prévia antes de confirmar  
-✅ Faça o download da foto  
-✅ Veja uma tela de agradecimento após o processo  
+###  Link do Deploy
 
----
+ [https://desafio-photo-opp-frontend.vercel.app/](https://desafio-photo-opp-frontend.vercel.app/)
 
-## Tecnologias Utilizadas
+##  Sobre o projeto
 
-- **React** (com **Vite**)
-- **TypeScript**
-- **Styled Components**
-- **Hooks React**: principalmente **useState** e **useEffect**
-- **Fetch API** (para envio da foto ao backend)
-- **HTML5 Media API** (para acesso à webcam)
+A aplicação **não seguiu fielmente o layout do Figma**.  
+O foco principal foi a **implementação de funcionalidades e lógica de desenvolvimento**.
 
----
+Fluxo da aplicação:
 
-## Estrutura de Pastas
+1. Tela inicial com botão "Começar"
+2. Contagem regressiva antes da captura
+3. Captura da foto via webcam
+4. Tela de revisão com opção de refazer ou confirmar
+5. Tela de download com QR Code para acesso à foto
+6. Tela final com mensagem de agradecimento
 
-```
-src/
-├── components/
-│   ├── Button/
-│   ├── CameraCapture/
-│   └── Spinner/
-│
-├── pages/
-│   ├── InitialScreen/
-│   ├── CountdownScreen/
-│   ├── CaptureScreen/
-│   ├── ReviewScreen/
-│   ├── ConfirmDownloadScreen/
-│   ├── DownloadScreen/
-│   ├── FinalScreen/
-│   ├── ThankYouScreen/
-│   ├── LoadingScreen/
-│   └── CameraTest/
-│
-└── styles/
-    └── GlobalStyles.ts
-```
+## 🛠 Tecnologias utilizadas
 
----
+- **React com TypeScript**
+- **Styled Components** → Estilização dos componentes
+- **React Webcam** → Captura de fotos da webcam
+- **qrcode.react** → Geração de QR Code
+- **Fetch API** → Comunicação com o backend (sem uso de Axios)
+- **useState / useEffect** → Controle de estado e ciclo de vida dos componentes
+- **Spring Boot (Backend - API REST)** → [Repositório Backend](https://github.com/FerRufato/Desafio-Photo-opp)
 
-##  Funcionalidades principais
+##  Como rodar o projeto localmente
 
--  **Captura de foto com webcam**
--  **Contagem regressiva antes da foto**
--  **Preview da foto antes de salvar**
--  **Envio da imagem para o backend via Fetch API**
--  **Download da imagem**
--  **Tela final de agradecimento**
--  **Navegação entre as telas controlada 100% com `useState` (sem uso de React Router)**
+### Pré-requisitos:
+- Node.js instalado
+- Backend rodando (Spring Boot)
 
----
-
-##  Integração com o Backend
-
-Este frontend se comunica com o backend Java Spring Boot que também desenvolvi.
-
-Repositório do backend:  
-[https://github.com/FerRufato/Desafio-Photo-opp](https://github.com/FerRufato/Desafio-Photo-opp)
-
-> O backend está rodando na porta **8080**  
-> Endpoint de envio da foto:  
-
-```
-POST http://localhost:8080/photos
-```
-
----
-
-##  Observação importante sobre o layout
-
-> **Importante:**  
-> Por opção técnica, **não segui exatamente o layout proposto no Figma**.  
-> Priorizei o desenvolvimento da lógica, o funcionamento completo das funcionalidades, a integração com a API e a entrega dentro do prazo.  
-
-O foco foi:  
-✅ Organização de código  
-✅ Estruturação das telas  
-✅ Funcionalidade fim a fim  
-
----
-
-##  Como rodar localmente
-
-1. Clone o projeto:
+### Passos:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/REPOSITORIO_FRONTEND.git
-```
+# Clone o repositório
+git clone https://github.com/FerRufato/Desafio-Photo-opp-frontend.git
 
-2. Instale as dependências:
+# Acesse a pasta do projeto
+cd Desafio-Photo-opp-frontend
 
-```bash
+# Instale as dependências
 npm install
-```
 
-3. Inicie a aplicação:
-
-```bash
+# Rode o projeto
 npm run dev
 ```
 
-4. Acesse no navegador:
+> A aplicação vai rodar localmente em:  
+http://localhost:3000  
+(Ou na porta configurada no seu projeto)
 
-```
-http://localhost:3003
-```
+##  Integração com o Backend
 
-> *(Você usou a porta 3003 durante o desenvolvimento.)*
+O frontend se comunica com a API backend Spring Boot hospedada no GitHub:  
+ [https://github.com/FerRufato/Desafio-Photo-opp](https://github.com/FerRufato/Desafio-Photo-opp)
 
----
+Para funcionar corretamente, o backend precisa estar rodando localmente ou em um servidor acessível.
 
-##  Status do Projeto
+##  Funcionalidades implementadas
 
-✔️ Backend: Deploy feito no GitHub  
-✔️ Frontend: Finalizado e funcionando localmente  
-✔️ Integração com backend: Testada via Fetch API  
-✔️ Fluxo completo: Do início ao fim, com captura, review, download e agradecimento  
+✅ Captura de foto pela webcam  
+✅ Contagem regressiva antes da foto  
+✅ Revisão e confirmação da foto  
+✅ Download da imagem  
+✅ Geração de QR Code com link de download  
+✅ Tela de agradecimento final  
+✅ Deploy na **Vercel**
