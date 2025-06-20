@@ -1,4 +1,4 @@
-# 📸 Desafio Photo Opp - Frontend
+#  Desafio Photo Opp - Frontend
 
 Este é o projeto **Frontend** do desafio **Photo Opp**, feito com **React + TypeScript**.
 
