@@ -1,46 +1,128 @@
-# Getting Started with Create React App
+# Photo Opp - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é o **Frontend** da aplicação **Photo Opp**, desenvolvido como parte de um desafio técnico.
 
-## Available Scripts
+O sistema permite que o usuário:
 
-In the project directory, you can run:
+✅ Capture uma foto usando a webcam  
+✅ Visualize uma prévia antes de confirmar  
+✅ Faça o download da foto  
+✅ Veja uma tela de agradecimento após o processo  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tecnologias Utilizadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React** (com **Vite**)
+- **TypeScript**
+- **Styled Components**
+- **Hooks React**: principalmente **useState** e **useEffect**
+- **Fetch API** (para envio da foto ao backend - **não foi utilizado Axios**)
+- **HTML5 Media API** (para acesso à webcam)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Estrutura de Pastas
 
-### `npm run build`
+```
+src/
+├── components/
+│   ├── Button/
+│   ├── CameraCapture/
+│   └── Spinner/
+│
+├── pages/
+│   ├── InitialScreen/
+│   ├── CountdownScreen/
+│   ├── CaptureScreen/
+│   ├── ReviewScreen/
+│   ├── ConfirmDownloadScreen/
+│   ├── DownloadScreen/
+│   ├── FinalScreen/
+│   ├── ThankYouScreen/
+│   ├── LoadingScreen/
+│   └── CameraTest/
+│
+└── styles/
+    └── GlobalStyles.ts
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Funcionalidades principais
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-  **Captura de foto com webcam**
+-  **Contagem regressiva antes da foto**
+-  **Preview da foto antes de salvar**
+-  **Envio da imagem para o backend via Fetch API**
+-  **Download da imagem**
+-  **Tela final de agradecimento**
+-  **Navegação entre as telas controlada 100% com `useState` (sem uso de React Router)**
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##  Integração com o Backend
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Este frontend se comunica com o backend Java Spring Boot que também desenvolvi.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Repositório do backend:  
+[https://github.com/FerRufato/Desafio-Photo-opp](https://github.com/FerRufato/Desafio-Photo-opp)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> O backend está rodando na porta **8080**  
+> Endpoint de envio da foto:  
 
-## Learn More
+```
+POST http://localhost:8080/photos
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##  Observação importante sobre o layout
+
+> **Importante:**  
+> Por opção técnica, **não segui exatamente o layout proposto no Figma**.  
+> Priorizei o desenvolvimento da lógica, o funcionamento completo das funcionalidades, a integração com a API e a entrega dentro do prazo.  
+
+O foco foi:  
+✅ Organização de código  
+✅ Estruturação das telas  
+✅ Funcionalidade fim a fim  
+
+---
+
+##  Como rodar localmente
+
+1. Clone o projeto:
+
+```bash
+git clone https://github.com/SEU_USUARIO/REPOSITORIO_FRONTEND.git
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Inicie a aplicação:
+
+```bash
+npm run dev
+```
+
+4. Acesse no navegador:
+
+```
+http://localhost:3003
+```
+
+> *(Você usou a porta 3003 durante o desenvolvimento.)*
+
+---
+
+##  Status do Projeto
+
+✔️ Backend: Deploy feito no GitHub  
+✔️ Frontend: Finalizado e funcionando localmente  
+✔️ Integração com backend: Testada via Fetch API  
+✔️ Fluxo completo: Do início ao fim, com captura, review, download e agradecimento  
